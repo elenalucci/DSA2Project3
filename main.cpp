@@ -15,7 +15,7 @@ int main(){
 	std::cout << "Enter the number of cities to run: ";
 	std::cin >> numCities;
 	std::cout << std::endl;
-/*	std::cout << "Enter the number of tours in a given generation: ";
+	std::cout << "Enter the number of tours in a given generation: ";
 	std:: cin >> numTours;
 	std::cout << std::endl;
 	std::cout << "Enter the number of generations to run: ";
@@ -24,11 +24,10 @@ int main(){
 	std::cout << "Enter the percentage each generation comprised of mutated tours as a decimal (ie: 0.0): ";
 	std::cin >> percentMutation;
 	std::cout << std::endl;
-*/
 
-	bf.setNumCities(numCities);
-	bf.permute(bf.factorial(numCities));
-	bf.displayResults();	
+	bf.SetNumCities(numCities);
+	bf.Permute(bf.Factorial(numCities));
+	bf.DisplayResults();	
 
 		
 	return 0;

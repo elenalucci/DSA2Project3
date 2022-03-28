@@ -6,20 +6,20 @@ BruteForce::BruteForce(){
 	graph.ReadFile();
 }
 
-void BruteForce::setNumCities(int numCities){
+void BruteForce::SetNumCities(int numCities){
 
 	this->numCities = numCities;
-	loadS();
+	LoadS();
 	
 }
 
-int BruteForce::getNumCities(){
+int BruteForce::GetNumCities(){
 
 	return numCities;
 
 }
 
-void BruteForce::loadS(){
+void BruteForce::LoadS(){
 	
 	s = new int [numCities +1];	
 
@@ -36,7 +36,7 @@ void BruteForce::loadS(){
 	minArray[numCities] = 0;
 }
 
-void BruteForce::printS(){
+void BruteForce::PrintS(){
 	
 
 	std::cout <<"{";
@@ -50,12 +50,12 @@ void BruteForce::printS(){
 	std::cout << std::endl;
 }
 
-void BruteForce::permute(int permsThisCall){
+void BruteForce::Permute(int permsThisCall){
 	
 	int m, k, p, q, i;
 	int numElements = numCities;
-	//printS();
-	findMin();
+	//PrintS();
+	FindMin();
 	for(i=1; i< permsThisCall; i++){
 		m = numElements - 2;
 		while(s[m] > s[m + 1]){
@@ -67,27 +67,27 @@ void BruteForce::permute(int permsThisCall){
 			k = k - 1;
 		}
 
-		swap(m,k);
+		Swap(m,k);
 		p = m + 1;
 		q = numElements - 1;
 		while( p < q){	
-			swap(p,q);
+			Swap(p,q);
 			p++;
 			q--;
 		}
-		//printS();
-		findMin();
+		//PrintS();
+		FindMin();
 	}
 }
 
-void BruteForce::swap(int a, int b){
+void BruteForce::Swap(int a, int b){
 
 	int temp = s[a];
 	s[a] = s[b];
 	s[b] = temp;
 }
 
-void BruteForce::findMin(){
+void BruteForce::FindMin(){
 	double tempDistance = 0;
 
 	for(int i=0; i<numCities;i++){
@@ -104,7 +104,7 @@ void BruteForce::findMin(){
 	}
 }
 
-int BruteForce::factorial(int numCities){
+int BruteForce::Factorial(int numCities){
 	int num = numCities-1;
 	int total =1;
 
@@ -116,7 +116,7 @@ int BruteForce::factorial(int numCities){
 
 }
 
-void BruteForce::displayResults(){
+void BruteForce::DisplayResults(){
 	std::cout<< "Cities visited: " << numCities << std::endl;
 	std::cout<< "Optimal Cost from Brute Force: " << minDistance << std::endl;
 	std::cout << "Optimal Tour: {";

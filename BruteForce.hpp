@@ -14,15 +14,15 @@ class BruteForce{
 				
 	public:
 		BruteForce();
-		void setNumCities(int numCities);
-		int getNumCities();
-		void loadS();
-		void printS();
-		void permute(int permsThisCall);
-		void swap(int a, int b);
-		void findMin();
-		int factorial(int numCities);
-		void displayResults();
+		void SetNumCities(int numCities);
+		int GetNumCities();
+		void LoadS();
+		void PrintS();
+		void Permute(int permsThisCall);
+		void Swap(int a, int b);
+		void FindMin();
+		int Factorial(int numCities);
+		void DisplayResults();
 
 
 };
