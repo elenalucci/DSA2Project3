@@ -10,8 +10,8 @@ void Graph::ReadFile(){
             	graph[i][j] = 0;
             }
             else{
-            	float value;
-                inFile >> value;
+            	float value =0;
+				inFile >> value;
                 graph[i][j] = value;
             }
         }
