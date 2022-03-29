@@ -1,3 +1,4 @@
+//DSA2 Project3 Elena Lucci
 #include "BruteForce.hpp"
 
 BruteForce::BruteForce(){
@@ -18,7 +19,7 @@ int BruteForce::GetNumCities(){
 	return numCities;
 
 }
-
+//creates s array and minArray
 void BruteForce::LoadS(){
 	
 	s = new int [numCities +1];	
@@ -86,7 +87,7 @@ void BruteForce::Swap(int a, int b){
 	s[a] = s[b];
 	s[b] = temp;
 }
-
+//compares tours to find minimum cost and saves the tour with the minimum cost in minArray
 void BruteForce::FindMin(){
 	double tempDistance = 0;
 

@@ -1,3 +1,4 @@
+//DSA2 Project3 Elena Lucci
 #include "GeneticAlgorithm.hpp"
 #include "Graph.hpp"
 #include <iostream>
@@ -29,7 +30,7 @@ void GeneticAlgorithm::SetNumGenerations(int numGenerations){
 void GeneticAlgorithm::SetPercentMutation(double percentMutation){
 	this->percentMutation = percentMutation;
 }
-
+//creates array s and min array
 void GeneticAlgorithm::LoadArray(){
 	
 	s = new int [numCities +1];
@@ -100,7 +101,7 @@ void GeneticAlgorithm::Permute(int permsThisCall){
 		FindMin();
 	}
 }
-
+//Compares each tour to find min distance and saves the tour with the min distance in minArray
 void GeneticAlgorithm::FindMin(){
 	double tempDistance = 0;
 
