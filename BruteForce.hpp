@@ -23,8 +23,8 @@ class BruteForce{
 		void FindMin();
 		int Factorial(int numCities);
 		void DisplayResults();
-
-
+		void Execute();
+		double GetMinDistance();
 };
 
 #endif

@@ -126,3 +126,14 @@ void BruteForce::DisplayResults(){
 	std::cout<< "}" << std::endl;
 	std::cout<< "Time taken in Brute Force: " << std::endl;
 }
+
+void BruteForce::Execute(){
+	
+	Permute(Factorial(numCities));
+	DisplayResults();
+
+}
+
+double BruteForce::GetMinDistance(){
+	return minDistance;
+}
